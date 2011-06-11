@@ -13,25 +13,25 @@ Please use freely in any of your projects!
 	
 Example usage:
 	
-	local dice = require("dice")
-	-- Most compact method roll 4d6 and subtract 2 from the roll
-	local dRoller = dice.new({dice=4, sides=6, adjust=-2})
-	dRoller.roll()
-	
-	local dRoller = dice.new()
+local dice = require("dice")
+-- Most compact method roll 4d6 and subtract 2 from the roll
+local dRoller = dice.new({dice=4, sides=6, adjust=-2})
+dRoller.roll()
 
-	-- Roll 3 6 sided dice and add 1 to the result (string method)
-	local roll = dRoller.rollFromDiceString("3d6+1")
-	print("roll = "..tostring(roll))
+local dRoller = dice.new()
 
-	-- Add 3 8 sided dice and one 12 and then roll
-	dRoller.addDie(12)
-	dRoller.reset()
-	dRoller.addMultipleDice(3, 8)
-	roll = dRoller.roll()
-	print("roll = "..roll)
+-- Roll 3 6 sided dice and add 1 to the result (string method)
+local roll = dRoller.rollFromDiceString("3d6+1")
+print("roll = "..tostring(roll))
 
-	-- Roll 4 10-sided dice and add 6 to the total
-	for i=1,10 do
-		print(dRoller.rollFromDiceString("4d10+6"))
-	end
+-- Add 3 8 sided dice and one 12 and then roll
+dRoller.reset()
+dRoller.addMultipleDice(3, 8)
+dRoller.addDie(12)
+roll = dRoller.roll()
+print("roll = "..roll)
+
+-- Roll 4 10-sided dice and add 6 to the total
+for i=1,10 do
+	print(dRoller.rollFromDiceString("4d10+6"))
+end
