@@ -26,9 +26,9 @@
 			print("roll = "..tostring(roll))
 
 			-- Add 3 8 sided dice and one 12 and then roll
-			dRoller.addDie(12)
 			dRoller.reset()
 			dRoller.addMultipleDice(3, 8)
+			dRoller.addDie(12)
 			roll = dRoller.roll()
 			print("roll = "..roll)
 
