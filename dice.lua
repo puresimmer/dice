@@ -3,7 +3,7 @@
 	dice.lua - A dice rolling module useful for bell curve type random distributions
 	================================================================================
 	
-	(c)2011 Shaun Sullivan
+	(c)2013 Shaun Sullivan
 	Electric Plum, LLC
 	www.electricplum.com
 	
